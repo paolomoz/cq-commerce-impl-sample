@@ -28,6 +28,9 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
+                <configuration>
+                    <specVersion>1.2</specVersion>
+                </configuration>
                 <executions>
                     <execution>
                         <id>generate-scr-descriptor</id>
@@ -144,7 +147,7 @@
         <dependency>
             <groupId>com.adobe.cq.commerce</groupId>
             <artifactId>cq-commerce-core</artifactId>
-            <version>5.6.8</version>
+            <version>5.6.18</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

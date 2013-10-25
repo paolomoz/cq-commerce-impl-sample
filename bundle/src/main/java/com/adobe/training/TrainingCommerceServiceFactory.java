@@ -27,7 +27,7 @@ public class TrainingCommerceServiceFactory extends AbstractJcrCommerceServiceFa
      * Create a new <code>TrainingCommerceServiceImpl</code>.
      */
 	public CommerceService getCommerceService(Resource res) {
-		return new TrainingCommerceServiceImpl(getServices(), res);
+		return new TrainingCommerceServiceImpl(getServiceContext(), res);
 	}
 
 }

@@ -1,6 +1,8 @@
 package com.adobe.training;
 
 import java.util.List;
+
+import com.adobe.cq.commerce.common.ServiceContext;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
@@ -22,8 +24,8 @@ public class TrainingCommerceServiceImpl extends AbstractJcrCommerceService impl
 	private Resource resource;
     private ResourceResolver resolver;
     
-    public TrainingCommerceServiceImpl(AbstractJcrCommerceServiceFactory.Services services, Resource res) {
-        super(services);
+    public TrainingCommerceServiceImpl(ServiceContext serviceContext, Resource res) {
+        super(serviceContext);
         this.resource = res;
         this.resolver = res.getResourceResolver();
     }
@@ -60,5 +62,8 @@ public class TrainingCommerceServiceImpl extends AbstractJcrCommerceService impl
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
+    public boolean isAvailable(String s) {
+        return true;
+    }
 }
